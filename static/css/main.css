@@ -1,0 +1,50 @@
+body {
+    background-color: #E5E5E5;
+}
+
+form {
+    width: 60%;
+    margin: 100px auto;
+}
+
+#query {
+    width: 80%;
+    height: 30px;
+    border: 2px solid black;
+}
+
+.select_lable {
+    height: 36px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;;
+}
+
+button {
+    height: 36px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;;
+}
+
+.view_plots {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.plot {
+    width: 49%;
+    border: 1px solid black;
+}
+
+/* Таблица с процентами */
+
+table {
+    margin: 0 auto;
+    width: 800px;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+}

@@ -1,0 +1,1 @@
+web: gunicorn predict_query_rating.wsgi --log-file -

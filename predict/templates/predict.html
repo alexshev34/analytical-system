@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<form action="/predict" method="get">
+    <label for="name" placeholder="Запрос:"></label>
+    <input type="text" id="query" name="query">
+    <select class="select_lable" name="query_type">
+        <option value="1">Товар</option>
+        <option value="0">Услуга</option>
+    </select>
+    <button type="submit">Спрогнозировать</button>
+</form>
+{% load static %}
+<div class="view_plots">
+    <img class="plot" src="{% static google_plot_path %}">
+    <img class="plot" src="{% static yandex_plot_path %}">
+    <!-- <img class="plot" src="{% static yandex_percents %}"> -->
+</div>
+<table>
+    <tr>
+        <!-- <h3>Месяц</h3> -->
+        <h3 style="text-align:center">Рост в процентах</h3>
+    </tr>
+    {% for m, p in final_list %}
+    <tr>
+        <td>{{ m }}</td>
+        <td>{{ p }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

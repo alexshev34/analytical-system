@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<form action="/predict" method="get">
+    <label for="name" placeholder="Запрос:"></label>
+    <input type="text" id="query" name="query">
+    <select class="select_lable" name="query_type">
+        <option value="1">Товар</option>
+        <option value="0">Услуга</option>
+    </select>
+    <button type="submit">Спрогнозировать</button>
+</form>
+{% endblock %}
